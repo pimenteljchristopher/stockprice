@@ -1,0 +1,19 @@
+<ion-view view-title="Note">
+ <ion-nav-buttons side="right">
+      <button class=" button button-icon ion-ios-plus-outline"  ng-click="showNote()">
+      </button>
+    </ion-nav-buttons>
+  <ion-content>
+   <ion-list >
+    <ion-item  ng-repeat="item in list " style="text-align:center;">
+    	<h1> {{item.symbol}}</h2>
+    	<h3>Date (Day Month Year): {{item.date}}</h3>
+    	<h3>Quantity: {{item.quantity}}</h3>
+    	<h3>Price: {{item.price}}</h3>
+    	<h3>Total: {{item.total}}</h3>
+    	  <button class=" button button-icon ion-ios-trash-outline" style="font-size:35px;" ng-click="removeNote($index)"/>
+      </button>
+    </ion-item>
+   </ion-list>
+  </ion-content>
+</ion-view>
